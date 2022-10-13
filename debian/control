@@ -1,0 +1,38 @@
+Source: node-d3-drag
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends:
+ debhelper-compat (= 12)
+ , node-d3-dispatch
+ , node-d3-selection
+ , node-tape <!nocheck>
+ , pkg-js-tools (>= 0.9.20~)
+ , rollup
+ , node-rollup-plugin-terser
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/js-team/node-d3-drag
+Vcs-Git: https://salsa.debian.org/js-team/node-d3-drag.git
+Homepage: https://d3js.org/d3-drag/
+Rules-Requires-Root: no
+
+Package: node-d3-drag
+Architecture: all
+Depends:
+ ${misc:Depends}
+ , node-d3-dispatch
+ , node-d3-selection
+ , nodejs
+Description: Drag and drop SVG, HTML or Canvas using mouse or touch input
+ Drag-and-drop is a popular and easy-to-learn pointing gesture: move the
+ pointer to an object, press and hold to grab it, “drag” the object to a new
+ location, and release to “drop”.
+ .
+ D3’s drag behavior provides a convenient but
+ flexible abstraction for enabling drag-and-drop interaction on selections. For
+ example, you can use d3-drag to facilitate interaction with a force-directed
+ graph, or a simulation of colliding circles.
+ .
+ Node.js is an event-based server-side JavaScript engine.
